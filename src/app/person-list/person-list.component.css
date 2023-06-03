@@ -5,7 +5,6 @@
     width: 100%;
     
 }
-
 .mainGrid {
     margin-top: 5%;
     display: grid;
@@ -15,11 +14,26 @@
     grid-row-gap: 60px;
     
 }
+@media only screen and (max-width: 600px) {
+    .mainGrid {
+        grid-template-columns: 1fr; /* Affiche sur une seule colonne */
+        grid-column-gap: 0; /* Supprime l'espace entre les colonnes */
+        grid-row-gap: 30px; /* Espace entre les lignes */
+    }
+}
+
 mat-card{
     width: 75vh;
     height: 350px;
     border-radius: 10px;
     border: 2px solid black;
+}
+@media only screen and (max-width: 600px) {
+    mat-card {
+        width: 95%; 
+    }
+
+    
 }
 mat-card-title{
     text-align: center;
