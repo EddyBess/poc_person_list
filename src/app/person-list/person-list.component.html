@@ -12,9 +12,9 @@
     <div class="center">
       
         <div class="mainGrid">
-
-            <div *ngFor="let id of cardIds"  class="personCard">
-                <mat-card *ngIf="this.usernames[id].includes(this.searchValue)==true">
+        <ng-container *ngFor="let id of cardIds" >
+            <div *ngIf="this.usernames[id].includes(this.searchValue)==true" class="personCard">
+                <mat-card >
                     <mat-card-content>
                         <button class="actionButton" (click)="clickEvent(id)" >
                             ...
@@ -106,6 +106,7 @@
         
                 </mat-card>
             </div>
+        </ng-container>
         
         
         </div>
