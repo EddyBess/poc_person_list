@@ -2,11 +2,19 @@
     <h1 class="center">
         Lab members
     </h1>
+    <div class="searchBar">
+      
+        <input type="text" placeholder="Search a member..." (keyup)="onKey($event)"> 
+        <button id="searchBtn">
+        <mat-icon aria-hidden="false" fontIcon="search"></mat-icon>
+        </button>
+    </div>
     <div class="center">
+      
         <div class="mainGrid">
 
-            <div *ngFor="let id of cardIds" class="personCard">
-                <mat-card>
+            <div *ngFor="let id of cardIds"  class="personCard">
+                <mat-card *ngIf="this.usernames[id].includes(this.searchValue)==true">
                     <mat-card-content>
                         <button class="actionButton" (click)="clickEvent(id)" >
                             ...
@@ -28,8 +36,7 @@
                         </div>
                     </mat-card-content>
                     <mat-card-title>
-                        John Smith
-                        
+                        {{this.usernames[id]}}
                     </mat-card-title>
                     <div class="profilePic">
                         <img mat-card-image src="../../assets/avatar.png" alt="userAvatar" class="avatar">
@@ -78,6 +85,12 @@
                             <span>
                                 0000-0002-4443-0542
                             </span>
+                        </div>
+                        <div class="bottomInfo">
+                            <strong>
+                                VCARD
+                            </strong>
+                            <mat-icon aria-hidden="false" fontIcon="assignment_ind" ></mat-icon>
                         </div>
                         <div class="bottomInfo">
                             <strong>

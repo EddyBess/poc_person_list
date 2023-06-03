@@ -10,7 +10,10 @@ export class PersonListComponent {
   
   cardIds : Array<number>;
   clicked : Array<boolean>;
-  
+  usernames : Array<string>;  
+  searchValue = "";
+
+
   constructor(
   private matIconRegistery : MatIconRegistry,
   private domSanitizer: DomSanitizer
@@ -19,7 +22,8 @@ export class PersonListComponent {
     // Initializing ids and clicked status
     this.cardIds = Array.from(Array(6).keys());
     this.clicked = Array(6).fill(false);
-
+    this.usernames = ["John Smith","Guillaume Bonavida","Stephane Galland","Gregoire Smith","Eddy Bessah","Raph Bon"]
+   
     // Adding custom Icons
     this.matIconRegistery.addSvgIcon(
       'teaching',
@@ -49,6 +53,10 @@ export class PersonListComponent {
 
   clickEvent(cardId:number){
     this.clicked[cardId]=!this.clicked[cardId];
+  }
+  onKey(event: KeyboardEvent) { // with type info
+    this.searchValue = (event.target as HTMLInputElement).value;
+    console.log(this.usernames[0].includes(this.searchValue))
   }
  
 }
