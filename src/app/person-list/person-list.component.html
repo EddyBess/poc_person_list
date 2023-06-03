@@ -22,16 +22,16 @@
                     </mat-card-content>
                     <mat-card-content>
                         <div *ngIf="clicked[id]==true "class="buttonList">
-                            <mat-icon aria-hidden="false" fontIcon="edit"></mat-icon>
-                            <mat-icon aria-hidden="false" fontIcon="delete"></mat-icon>
-                            <mat-icon aria-hidden="false" fontIcon="lan"></mat-icon>
-                            <mat-icon aria-hidden="false" svgIcon="teaching"></mat-icon>
-                            <mat-icon aria-hidden="false" fontIcon="airplanemode_active"></mat-icon>
-                            <mat-icon aria-hidden="false" svgIcon="school"></mat-icon>
-                            <mat-icon aria-hidden="false" svgIcon="bibtex"></mat-icon>
-                            <mat-icon aria-hidden="false" svgIcon="odt"></mat-icon>
-                            <mat-icon aria-hidden="false" svgIcon="html"></mat-icon>
-                            <mat-icon aria-hidden="false" svgIcon="json"></mat-icon>
+                            <mat-icon aria-hidden="false" fontIcon="edit" matTooltip="Edit the person {{usernames[id]}}"></mat-icon>
+                            <mat-icon aria-hidden="false" fontIcon="delete" matTooltip="Delete the person {{usernames[id]}}"></mat-icon>
+                            <mat-icon aria-hidden="false" fontIcon="lan" matTooltip="Edit the memberships of {{usernames[id]}}" ></mat-icon>
+                            <mat-icon aria-hidden="false" svgIcon="teaching" matTooltip="Edit the jury memberships of {{usernames[id]}}"></mat-icon>
+                            <mat-icon aria-hidden="false" fontIcon="airplanemode_active"  matTooltip="Edit the invitations of {{usernames[id]}}"></mat-icon>
+                            <mat-icon aria-hidden="false" svgIcon="school"  matTooltip="Edit the teaching activities of {{usernames[id]}}"></mat-icon>
+                            <mat-icon aria-hidden="false" svgIcon="bibtex" matTooltip="Get BibTeX of publications for {{usernames[id]}}"></mat-icon>
+                            <mat-icon aria-hidden="false" svgIcon="odt" matTooltip="Get Open Document Text of publications for {{usernames[id]}}"></mat-icon>
+                            <mat-icon aria-hidden="false" svgIcon="html" matTooltip="Get HTML of publications for {{usernames[id]}}"></mat-icon>
+                            <mat-icon aria-hidden="false" svgIcon="json" matTooltip="Get JSON for {{usernames[id]}}"></mat-icon>
 
                         </div>
                     </mat-card-content>
@@ -90,7 +90,7 @@
                             <strong>
                                 VCARD
                             </strong>
-                            <mat-icon aria-hidden="false" fontIcon="assignment_ind" ></mat-icon>
+                            <mat-icon aria-hidden="false" matTooltip= "View {{usernames[id]}}'s VCard" fontIcon="assignment_ind" ></mat-icon>
                         </div>
                         <div class="bottomInfo">
                             <strong>
