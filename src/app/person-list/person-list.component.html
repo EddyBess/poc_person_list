@@ -1,0 +1,102 @@
+<div class="container">
+    <h1 class="center">
+        Lab members
+    </h1>
+    <div class="center">
+        <div class="mainGrid">
+
+            <div *ngFor="let id of cardIds" class="personCard">
+                <mat-card>
+                    <mat-card-content>
+                        <button class="actionButton" (click)="clickEvent(id)" >
+                            ...
+                        </button>
+                    </mat-card-content>
+                    <mat-card-content>
+                        <div *ngIf="clicked[id]==true "class="buttonList">
+                            <mat-icon aria-hidden="false" fontIcon="edit"></mat-icon>
+                            <mat-icon aria-hidden="false" fontIcon="delete"></mat-icon>
+                            <mat-icon aria-hidden="false" fontIcon="lan"></mat-icon>
+                            <mat-icon aria-hidden="false" svgIcon="teaching"></mat-icon>
+                            <mat-icon aria-hidden="false" fontIcon="airplanemode_active"></mat-icon>
+                            <mat-icon aria-hidden="false" svgIcon="school"></mat-icon>
+                            <mat-icon aria-hidden="false" svgIcon="bibtex"></mat-icon>
+                            <mat-icon aria-hidden="false" svgIcon="odt"></mat-icon>
+                            <mat-icon aria-hidden="false" svgIcon="html"></mat-icon>
+                            <mat-icon aria-hidden="false" svgIcon="json"></mat-icon>
+
+                        </div>
+                    </mat-card-content>
+                    <mat-card-title>
+                        John Smith
+                        
+                    </mat-card-title>
+                    <div class="profilePic">
+                        <img mat-card-image src="../../assets/avatar.png" alt="userAvatar" class="avatar">
+        
+                    </div>
+                    <mat-card-content class="content" id="mainContent">
+                        <div class="organization">
+                            <span>
+                                Former organization
+                            </span>
+                            <img mat-card-image src="../../assets/ciad.png" alt="CIAD" class="orgLogo">
+                            <span>
+                                CIAD
+                            </span>
+                        </div>
+                        <div class="organization">
+                            <span>
+                                Current organization
+                            </span>
+                            <img mat-card-image src="../../assets/utbm.png" alt="UTBM" class="orgLogo">
+        
+                            <span>
+                                UTBM
+                            </span>
+                        </div>
+                        <div class="organization">
+                            <span>
+                                Future organization
+                            </span>
+                            <img mat-card-image src="../../assets/ubfc.jpeg" alt="UBFC" class="orgLogo">
+        
+                            <span>
+                                UBFC
+                            </span>
+                        </div>
+        
+                    </mat-card-content>
+        
+                    <mat-divider></mat-divider>
+        
+                    <mat-card-content class="content" id="footer">
+                        <div class="bottomInfo">
+                            <strong>
+                                ORCID
+                            </strong>
+                            <span>
+                                0000-0002-4443-0542
+                            </span>
+                        </div>
+                        <div class="bottomInfo">
+                            <strong>
+                                Validated
+                            </strong>
+                            <mat-icon aria-hidden="false" fontIcon="check_circle_outline" [ngStyle]="{'color':'#3EC26B'}" ></mat-icon>
+                        </div>
+                    </mat-card-content>
+        
+        
+        
+        
+        
+                </mat-card>
+            </div>
+        
+        
+        </div>
+        </div>
+        
+    </div>
+   

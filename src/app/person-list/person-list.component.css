@@ -1,0 +1,93 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.center{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.mainGrid {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    
+}
+mat-card{
+    width: 600px;
+    height: 350px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+mat-card-title{
+    text-align: center;
+}
+.content{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+}
+#mainContent{
+    height: 40%;
+    align-items: center;
+    padding-bottom: 5%;
+}
+#footer{
+    position: absolute;
+    bottom: 0;
+    justify-content: space-between;
+}
+.bottomInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.orgLogo{
+    height: 40px;
+}
+.organization{
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profilePic{
+    display: flex;
+    justify-content: center;
+}
+.avatar{
+    
+    height: 70px;
+    width: 70px;
+}
+
+.actionButton{
+    background-color: black;
+    width: 40px;
+    height: 25px;
+    border-radius: 10px;
+    right: -15px;
+    top: -5px;
+    position: absolute;
+    text-align: center;
+    color: white;
+    border: white;
+
+}
+.actionButton:hover{
+    cursor: pointer;
+}
+.buttonList{
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid black;
+    right: -10px;
+    top:-55px;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
