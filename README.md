@@ -1,6 +1,8 @@
-# PersonList
+# POC PersonList
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+
+It contains the POC for the CIAD Lab's person list.
 
 ## Development server
 
